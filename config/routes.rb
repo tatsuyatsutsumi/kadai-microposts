@@ -10,9 +10,11 @@ Rails.application.routes.draw do
     member do
       get :followings
       get :followers
+      get :likes # お気に入り一覧を表示させるのであればlikingsか？あるいは、課題の指示ではアクションをlikesにするとのことなので、likesか？
     end
   end
 
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :likes, only: [:create, :destroy]
 end
