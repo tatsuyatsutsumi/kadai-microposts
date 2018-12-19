@@ -12,8 +12,8 @@ class User < ApplicationRecord
   has_many :reverses_of_relationship, class_name: 'Relationship', foreign_key: 'follow_id'
   has_many :followers, through: :reverses_of_relationship, source: :user
   has_many :likes
-# has_many :likings, through: :likes, source: :micropost これはmicropost.rbへの記載か？
-　
+  has_many :likings, through: :likes, source: :micropost # user.rbと同じくlikingsで問題ないか？source:はmicropost？
+
   def follow(other_user)
     unless self == other_user
       self.relationships.find_or_create_by(follow_id: other_user.id)

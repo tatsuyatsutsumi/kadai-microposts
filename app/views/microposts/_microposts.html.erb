@@ -12,10 +12,12 @@
           <p><%= micropost.content %></p>
         </div>
         <div>
+          <%= render 'likes/like_button', micropost: micropost %>　<%# 記述位置と内容は問題ないか？ %>
+        </div>
+        <div>
           <% if current_user == micropost.user %>
             <%= link_to "Delete", micropost, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
           <% end %>
-          <%= render 'likes/like_button', micropost: @microposts %>　<%# 記述位置と内容は問題ないか？ %>
         </div>
       </div>
     </li>
