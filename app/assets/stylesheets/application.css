@@ -14,10 +14,6 @@
  *= require_self
  */
  
-.jumbotron {
+.jumbotron_bg {
   background: url(paper-1990111_1280.jpg);
-}
-
-.h1, h1 {
-    font-size: 36px;
 }
