@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+ 
+.jumbotron {
+  background: url(paper-1990111_1280.jpg);
+}
+
+.h1, h1 {
+    font-size: 36px;
+}

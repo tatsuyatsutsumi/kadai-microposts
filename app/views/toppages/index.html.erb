@@ -5,7 +5,7 @@
         <div class="form-group">
           <%= f.text_area :content, class: 'form-control', rows: 5 %>
         </div>
-        <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+        <%= f.submit 'ポストする', class: 'btn btn-primary btn-block' %>
       <% end %>
     </aside>
     <div class="col-xs-8">
@@ -15,8 +15,10 @@
 <% else %>
   <div class="center jumbotron">
     <div class="text-center">
-      <h1>Welcome to the Microposts</h1>
-      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+      <h1>ようこそアイデアポストへ!!</h1>
+      <p>アイデアポストは気軽アイデアを投稿・共有できるサービスです。</p>
+      <p>まずは登録してみましょう。</p>
+      <%= link_to '新規登録', signup_path, class: 'btn btn-lg btn-primary' %>
     </div>
   </div>
 <% end %>
