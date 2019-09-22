@@ -13,7 +13,33 @@ class MicropostsController < ApplicationController
       render 'toppages/index'
     end
   end
+  
+  def show
+    @micropost = Micropost.find_by(id: params[:id])
+    redirect_to :root if @micropost.blank?
+  end
+  
+  def edit
+    @micropost = Micropost.find_by(id: params[:id])
+    if @micropost.blank?
+      redirect_to :root
+    elsif @micropost.user_id != current_user.id
+      redirect_to :root
+    end
+  end
 
+  def update
+    @micropost = Micropost.find_by(id: params[:id])
+    if @micropost.update_attributes(micropost_params)
+      flash[:success] = 'メッセージを編集しました。'
+      redirect_to :root
+    else
+      @micropost.valid?
+      flash.now[:danger] = 'メッセージの編集に失敗しました。'
+      render action: :edit
+    end
+  end
+  
   def destroy
     @micropost.destroy
     flash[:success] = 'メッセージを削除しました。'

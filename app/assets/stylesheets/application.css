@@ -15,5 +15,54 @@
  */
  
 .jumbotron_bg {
-  background: url(paper-1990111_1280.jpg);
+  min-height: 650px;
+  background: url(cube-3322835_1920.jpg);
+  background-position: center;
+  background-repeat:  no-repeat;
+  color: #fff;
+}
+
+.row_sign {
+  padding-top: 10px;
+  min-height: 700px;
+  background: url(cube-3322835_1920.jpg);
+  background-position: center;
+  background-repeat:  no-repeat;
+  color: #fff;
+}
+
+.form-group {
+  max-width: 500px;
+  margin: auto;
+}
+
+html{
+height:100%;
+}
+
+body{
+margin: 0;
+padding: 0;
+height:100%; 
+}
+
+.for_background{
+  height:100%;
+  min-height:100%;
+  background: url(wall-2423815_1920.jpg);
+  background-position: center;
+  background-repeat:  no-repeat;
+}
+
+.edit_micropost{
+  min-width: 500px;
+  min-height: 180px;
+}
+
+.nav-justified {
+  background-color: #fff;
+}
+
+.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover {
+  border: 1px solid #999999c2;
 }

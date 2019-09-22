@@ -1,25 +1,31 @@
-<div class="text-center">
-  <h1>ログイン</h1>
-</div>
-
-<div class="row">
+<div class="row_sign">
+  <div class="text-center">
+    <h1>ログイン</h1>
+  </div><br>
   <div class="col-md-6 col-md-offset-3">
-
     <%= form_for(:session, url: login_path) do |f| %>
-
       <div class="form-group">
         <%= f.label :email, 'メールアドレス' %>
         <%= f.email_field :email, class: 'form-control' %>
-      </div>
-
+      </div><br>
       <div class="form-group">
         <%= f.label :password, 'パスワード' %>
         <%= f.password_field :password, class: 'form-control' %>
+      </div<br><br><br>
+      <div class="text-center">
+        <%= f.submit "会員ログイン", class: "btn btn-primary btn-lg"%>
       </div>
-
-      <%= f.submit 'ログイン', class: 'btn btn-primary btn-block' %>
-    <% end %>
-
-    <p>新規ユーザーの方▶︎<%= link_to '新規登録', signup_path %></p>
+    <% end %><br><br><br>
+    <i class="fas fa-key"></i>
+    <div class="text-center">
+      <%= form_for(:session, url: login_path) do |f| %>
+        <%= link_to 'アカウント登録', signup_path, class: 'btn btn-success btn-lg' %>&nbsp;&nbsp;&nbsp;
+        <%= f.hidden_field :email, value: "tatsuya223+ideapost@gmail.com" %>
+        <%= f.hidden_field :password, value: "ideapost" %>
+        <%= f.submit "簡単ログイン", class: "btn btn-danger btn-lg"%>
+      <% end %>
+    </div>
   </div>
 </div>
+</div><br>
+<div class="copyright">&nbsp;&nbsp;© Idea Post</div>
