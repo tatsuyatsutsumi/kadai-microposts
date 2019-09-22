@@ -18,7 +18,7 @@
   min-height: 650px;
   background: url(cube-3322835_1920.jpg);
   background-position: center;
-  background-repeat:  no-repeat;
+  background-repeat: no-repeat;
   color: #fff;
 }
 
@@ -27,7 +27,7 @@
   min-height: 700px;
   background: url(cube-3322835_1920.jpg);
   background-position: center;
-  background-repeat:  no-repeat;
+  background-repeat: no-repeat;
   color: #fff;
 }
 
@@ -47,11 +47,10 @@ height:100%;
 }
 
 .for_background{
-  height:100%;
   min-height:100%;
   background: url(wall-2423815_1920.jpg);
   background-position: center;
-  background-repeat:  no-repeat;
+  background-repeat: repeat-y;
 }
 
 .edit_micropost{
